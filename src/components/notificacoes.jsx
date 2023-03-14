@@ -41,7 +41,7 @@ export default function Notificacoes() {
     ])
 
     return (
-        <div className="fixed w-full max-w-sm">
+        <div className="w-auto max-w-sm mr-10">
         <Popover className="relative">
             {({ open }) => (
             <>

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import Header from '@/components/header'
+import SlideBar from '@/components/slidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,9 @@ export default function Home() {
       </Head>
       <main>
         <Header/>
+        <div className='top-0 left-0 fixed'>
+            <SlideBar/>
+        </div>
       </main>
     </>
   )
