@@ -2,57 +2,47 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link";
 import { useState } from "react"
+import { IoIosArrowBack, IoCall } from 'react-icons/Io'
+import { FaSchool } from 'react-icons/Fa'
+import { GiArchiveRegister, GiBugleCall } from 'react-icons/Gi'
+import { SiGoogleclassroom } from 'react-icons/Si'
 
 export default function SlideBar({ setTrigger }) {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const Menu = [
-        { title: '1º Sprint', img: 'peca', src: 'sprintum' },
-        { title: '2º Sprint', img: 'engrenagem', src: 'sprintdois'},
-        { title: '3º Sprint', img: 'entrega', src: 'sprinttres' },
-        { title: 'Documentação', img: 'documentacao', src: 'documentacao' },
-        { title: 'Developers', img: 'developers', src: '', gap: true },
-        { title: 'Daniel Dante', img: 'daniel_dante', src: 'danielDante' },
-        { title: 'Giovanna Freitas', img: 'giovanna_freitas', src: 'giovannaFreitas' },
-        { title: 'João Montanari', img: 'joao_montanari', src: 'joaoMontanari' },
-        { title: 'Maitê Favaro', img: 'maite_favaro', src: 'maiteFavaro' },
-        { title: 'Naiury Chaves', img: 'naiury_chaves', src: 'naiuryChaves' },
+        {
+            title: 'Sala de aula virtual',
+            icon: <FaSchool className='text-3xl ml-1 text-gray-500'/>,
+            src: 'salaVirtual'
+        },
+        {
+            title: 'Dados cadastrais',
+            icon: <GiArchiveRegister className='text-3xl ml-1 text-gray-500'/>,
+            src: 'cadastro'
+        },
+        {
+            title: 'Atendimento',
+            icon: <GiBugleCall className='text-3xl ml-1 text-gray-500'/>,
+            src: 'atendimento'
+        },
+        {
+            title: 'Disciplinas matriculadas',
+            icon: <SiGoogleclassroom className='text-3xl ml-1 text-gray-500'/>,
+            src: 'disciplinas'
+        },
     ]
 
     return (
-        <div className= {`${open ? "w-72" : "w-20"} duration-300 h-screen shadow-2xl bg-[#1143c2] relative p-3 pt-7`}>
-            <Image
-                src={'/image/slideBar.png'}
-                width={50}
-                height={50}
-                alt='Button SlideBar'
-                className={`absolute w-8 cursor-pointer -right-4 top-16 border-2 border-[#1143c2] rounded-full p-1 bg-white duration-500 ${!open && 'rotate-180'}`}
+        <div className= {`${open ? "w-72" : "w-20"} duration-300 h-screen shadow-2xl relative p-3 pt-7 border-l border-gray-300 bg-white`}>
+            <IoIosArrowBack
+                className={`text-3xl absolute w-8 cursor-pointer -right-4 top-16 bg-white border-2 border-gray-200 rounded-full duration-500 ${!open && 'rotate-180'}`}
                 onClick={() => {setOpen(!open)}}
             />
-            <Link href={'/'}>
-                <div className="flex gap-x-4 items-center">
-                        <Image
-                            src={'/image/logo.png'}
-                            width={50}
-                            height={50}
-                            alt='logo'
-                            className={`cursor-pointer duration-500 ${!open && 'rotate-180'}`}
-                        />
-                    <h1 className={`text-white origin-left font-medium text-4xl duration-300 ${!open && 'scale-0'}`}>
-                        Avilla
-                    </h1>
-                </div>
-            </Link>
             <ul>
                 {
                     Menu.map((aba, index)=>(
-                        <Link href={`/${aba.src}`} key={index} className={`p-1 text-gray-200 flex items-center gap-x-4 rounded-md duration-300 ${aba.gap ? "mt-9 text-xl font-bold" : "text-base mt-2 hover:bg-[#0d4ae3d0] cursor-pointer"} ${index === 0 && 'mt-7'}`}>
-                            <Image
-                                src={`/image/${aba.img}.png`}
-                                width={35}
-                                height={35}
-                                alt={aba.title}
-                                className="rounded-full"
-                            />
+                        <Link href={`/${aba.src}`} key={index} className={`p-1 text-gray-400 flex items-center gap-x-4 rounded-md duration-300 ${aba.gap ? "mt-9 text-xl font-bold" : "text-base mt-2 hover:bg-gray-200 cursor-pointer"} ${index === 0 && 'mt-7'}`}>
+                            {aba.icon}
                             <span className={`${!open && 'hidden'} origin-left duration-300`}>
                                 {aba.title}
                             </span>

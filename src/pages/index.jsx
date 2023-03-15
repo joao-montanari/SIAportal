@@ -19,8 +19,13 @@ export default function Home() {
       </Head>
       <main>
         <Header/>
-        <div className='top-0 left-0 fixed'>
-            <SlideBar/>
+        <div className='flex'>
+          <div className='top-20 left-0 fixed'>
+              <SlideBar/>
+          </div>
+          <h1 className="mt-10 ml-28 text-4xl font-bold text-[#88185D]">
+            Home
+          </h1>
         </div>
       </main>
     </>

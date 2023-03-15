@@ -20,7 +20,7 @@ export default function Header() {
                         />
                     </Link>
                 </div>
-                <div className="w-1/2 h-full items-center flex">
+                <div className="w-1/2 h-full items-center flex border border-black">
                     <Notificacoes/>
                     <div className="flex">
                         <div className="text-gray-500 mr-4">
