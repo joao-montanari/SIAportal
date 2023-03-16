@@ -2,12 +2,12 @@ import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Fragment, useState } from 'react'
 
-import { VscBell, VscBellDot } from 'react-icons/Vsc'
-import { HiUserCircle } from 'react-icons/Hi'
-import { BsCameraFill, BsTelephoneFill } from 'react-icons/Bs'
-import { HiDocument } from 'react-icons/Hi'
-import { FaAddressBook } from 'react-icons/Fa'
-import { MdLogout } from 'react-icons/Md'
+import { VscBell, VscBellDot } from 'react-icons/vsc'
+import { HiUserCircle } from 'react-icons/hi'
+import { BsCameraFill, BsTelephoneFill } from 'react-icons/bs'
+import { HiDocument } from 'react-icons/hi'
+import { FaAddressBook } from 'react-icons/fa'
+import { MdLogout } from 'react-icons/md'
 
 export default function Usuario() {
     const [visualizacao, setVisualizacao] = useState(true);
@@ -59,26 +59,26 @@ export default function Usuario() {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1"
                     >
-                        <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-60 -translate-x-1/2 transform px-4 sm:px-0">
-                            <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                <div className="relative grid gap-2 bg-white p-3">
-                                    {
-                                        opcoes.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                className="hover:bg-gray-200 rounded-lg px-1 py-2 duration-700"
-                                            >
-                                                <div className='flex items-center'>
-                                                    {item.icon}
-                                                    <h1 className='ml-2'>{item.name}</h1>
-                                                </div>
-                                            </a>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-                        </Popover.Panel>
+                      <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-60 -translate-x-1/2 transform px-4 sm:px-0">
+                          <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                              <div className="relative grid gap-2 bg-white p-3">
+                                  {
+                                      opcoes.map((item) => (
+                                          <a
+                                              key={item.name}
+                                              href={item.href}
+                                              className="hover:bg-gray-200 rounded-lg px-1 py-2 duration-700"
+                                          >
+                                              <div className='flex items-center'>
+                                                  {item.icon}
+                                                  <h1 className='ml-2'>{item.name}</h1>
+                                              </div>
+                                          </a>
+                                      ))
+                                  }
+                              </div>
+                          </div>
+                      </Popover.Panel>
                     </Transition>
                 </>
                 )}

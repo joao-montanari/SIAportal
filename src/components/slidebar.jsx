@@ -2,10 +2,10 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link";
 import { useState } from "react"
-import { IoIosArrowBack, IoCall } from 'react-icons/Io'
-import { FaSchool } from 'react-icons/Fa'
-import { GiArchiveRegister, GiBugleCall } from 'react-icons/Gi'
-import { SiGoogleclassroom } from 'react-icons/Si'
+import { IoIosArrowBack, IoCall } from 'react-icons/io'
+import { FaSchool } from 'react-icons/fa'
+import { GiArchiveRegister, GiBugleCall } from 'react-icons/gi'
+import { SiGoogleclassroom } from 'react-icons/si'
 
 export default function SlideBar({ setTrigger }) {
     const [open, setOpen] = useState(false);
