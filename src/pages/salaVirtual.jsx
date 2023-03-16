@@ -8,6 +8,7 @@ export default function salaVirtual() {
         <>
             <Head>
                 <title>Sala de Aula Virtual</title>
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <Header/>
             <div className="flex">

@@ -8,6 +8,7 @@ export default function Atendimento() {
         <>
             <Head>
                 <title>Atendimento</title>
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <Header/>
             <div className="flex">

@@ -8,6 +8,7 @@ export default function Cadastro() {
         <>
             <Head>
                 <title>Dados Cadastrais</title>
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <Header/>
             <div className="flex">

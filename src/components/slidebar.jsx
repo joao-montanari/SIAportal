@@ -6,6 +6,8 @@ import { IoIosArrowBack, IoCall } from 'react-icons/io'
 import { FaSchool } from 'react-icons/fa'
 import { GiArchiveRegister, GiBugleCall } from 'react-icons/gi'
 import { SiGoogleclassroom } from 'react-icons/si'
+import { TbBooks } from 'react-icons/tb'
+import { MdWork } from 'react-icons/md'
 
 export default function SlideBar({ setTrigger }) {
     const [open, setOpen] = useState(false);
@@ -29,6 +31,16 @@ export default function SlideBar({ setTrigger }) {
             title: 'Disciplinas matriculadas',
             icon: <SiGoogleclassroom className='text-3xl ml-1 text-gray-500'/>,
             src: 'disciplinas'
+        },
+        {
+            title: 'Biblioteca virtual',
+            icon: <TbBooks className='text-3xl ml-1 text-gray-500'/>,
+            src: 'biblioteca'
+        },
+        {
+            title: 'Estágio',
+            icon: <MdWork className='text-3xl ml-1 text-gray-500'/>,
+            src: 'estagio'
         },
     ]
 
