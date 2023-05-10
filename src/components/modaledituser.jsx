@@ -1,16 +1,17 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { BsPenFill } from 'react-icons/bs'
+import { GrFormClose } from 'react-icons/gr'
 
 export default function ModalEditUser() {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className='bg-[#88185D] justify-center flex p-3 rounded-full'
+        className='bg-[#88185D] justify-center flex p-3 rounded-full hover:bg-[#cd298e] duration-300'
       >
         <BsPenFill
           className='m-auto text-white'
@@ -43,11 +44,15 @@ export default function ModalEditUser() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                <Dialog.Panel className="relative w-full max-w-xl transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <button 
+                    type='button'
+                    className='absolute top-0 right-0 mt-3 mr-3 rounded-md hover:bg-red-100 duration-300'
+                    onClick={() => setIsOpen(false)}
                   >
+                    <GrFormClose size={30} className='text-gray-400' />
+                  </button>
+                  <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                     Editar informações de cadastro
                   </Dialog.Title>
                   <div className="mt-2">
@@ -60,10 +65,10 @@ export default function ModalEditUser() {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="float-right inline-flex justify-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 duration-300"
                       onClick={() => setIsOpen(false)}
                     >
-                      Got it, thanks!
+                      Salvar
                     </button>
                   </div>
                 </Dialog.Panel>
