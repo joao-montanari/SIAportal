@@ -3,6 +3,7 @@ import { useState } from "react"
 
 import Header from "@/components/header"
 import SlideBar from "@/components/slidebar"
+import ModalEditUser from "@/components/modaledituser"
 
 export default function Cadastro() {
     const [name, setName] = useState('Joao Montanari')
@@ -11,8 +12,8 @@ export default function Cadastro() {
     const [cpf, setCpf] = useState('36552714840')
     const [curso, setCurso] = useState('Ciência da Computação')
     const [turma, setTurma] = useState('CC-0100')
-    const [mensalidade, setMensalidade] = useState('800,00')
-    const [usuario, setUsuario] = useState('joaomontanari')
+    const [mensalidade, setMensalidade] = useState('840,00')
+    const [usuario, setUsuario] = useState('joao_montanari')
     const [email, setEmail] = useState('joao.montanari@gmail.com')
     const [nascimento, setNascimento] = useState('21 de junho de 2003')
     const [telefone, setTelefone] = useState('+55 (19) 98933-7462')
@@ -28,7 +29,7 @@ export default function Cadastro() {
                 <div className='top-20 left-0 fixed'>
                     <SlideBar/>
                 </div>
-                <div className="ml-28 w-full">
+                <div className="relative ml-28 w-full">
                     <h1 className="mt-10 text-4xl font-bold text-[#88185D]">
                         Dados Cadastrais
                     </h1>
@@ -106,7 +107,7 @@ export default function Cadastro() {
                             Informações do usuário
                         </h1>
                         <p className="text-gray-500 mt-2">
-                            As informações deste campo contém um critério maior de sensibilidade. Elas devem ser vistas apenas pelo usuário pertencente a conta, então tome cuidado ao compartilha-las.
+                            As informações deste campo contém um critério maior de sensibilidade. Elas devem ser vistas apenas pelo usuário a quem pertencente a conta.Tome cuidado ao compartilha-las.
                         </p>
                         <div className="relative flex border-b-2 border-gray-300 my-5 pb-4 pl-4">
                             <h1 className="font-semibold text-gray-500">
@@ -142,12 +143,15 @@ export default function Cadastro() {
                         </div>
                         <div className="relative flex my-5 pl-4">
                             <h1 className="font-semibold text-gray-500">
-                                Curso
+                                Mensalidade
                             </h1>
                             <label className="absolute text-xl right-0 mr-8">
-                                {curso}
+                                {mensalidade}
                             </label>
                         </div>
+                    </div>
+                    <div className="fixed bottom-0 right-0 mb-6 mr-6">
+                        <ModalEditUser/>
                     </div>
                 </div>
             </div>
