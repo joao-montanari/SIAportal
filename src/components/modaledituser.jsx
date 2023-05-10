@@ -1,7 +1,14 @@
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
-import { BsPenFill } from 'react-icons/bs'
-import { GrFormClose } from 'react-icons/gr'
+import { Dialog, Transition } from '@headlessui/react';
+import { Fragment, useState } from 'react';
+import { BsPenFill } from 'react-icons/bs';
+import { GrFormClose } from 'react-icons/gr';
+import InputMask from 'react-input-mask';
+
+import { AiOutlineUser, AiOutlineCalendar } from 'react-icons/ai';
+import { MdOutlineEmail } from 'react-icons/md';
+import { HiOutlineDocumentDuplicate } from 'react-icons/hi';
+import { BiPhone } from 'react-icons/bi';
+import { IoIosTransgender } from 'react-icons/io';
 
 export default function ModalEditUser() {
   let [isOpen, setIsOpen] = useState(false);
@@ -11,7 +18,7 @@ export default function ModalEditUser() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className='bg-[#88185D] justify-center flex p-3 rounded-full hover:bg-[#cd298e] duration-300'
+        className='bg-[#88185D] justify-center flex p-3 rounded-full hover:bg-[#cd298e] duration-300 shadow-md'
       >
         <BsPenFill
           className='m-auto text-white'
@@ -52,19 +59,80 @@ export default function ModalEditUser() {
                   >
                     <GrFormClose size={30} className='text-gray-400' />
                   </button>
-                  <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                  
+                  <Dialog.Title as="h3" className="text-xl font-medium leading-6 text-gray-900">
                     Editar informações de cadastro
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
+                  <form className='mt-3 columns-2'>
+                    <div className=''>
+                      <label className='pl-1'>Nome:</label>
+                      <div className='flex'>
+                        <AiOutlineUser className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                        <input 
+                          type="text"
+                          className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                        />
+                      </div>
+                    </div>
+                    <div className='mt-2'>
+                      <label className='pl-1'>E-mail:</label>
+                        <div className='flex'>
+                          <MdOutlineEmail className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <input 
+                            type="email" 
+                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                          />
+                        </div>
+                    </div>
+                    <div className='mt-2'>
+                      <label className='pl-1'>Nascimento:</label>
+                        <div className='flex'>
+                          <AiOutlineCalendar className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <input 
+                            type="date" 
+                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                          />
+                        </div>
+                    </div>
+                    <div className='mt-2'>
+                      <label className='pl-1'>Telefone:</label>
+                        <div className='flex'>
+                          <BiPhone className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <InputMask 
+                            type="text" 
+                            mask="(99) 99999-9999"
+                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                          />
+                        </div>
+                    </div>
+                    <div className='mt-2'>
+                      <label className='pl-1'>CPF:</label>
+                        <div className='flex'>
+                          <HiOutlineDocumentDuplicate className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <InputMask 
+                            type="text" 
+                            mask="999.999.999-99"
+                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                          />
+                        </div>
+                    </div>
+                    <div className='mt-2'>
+                      <label className='pl-1'>Gênero:</label>
+                        <div className='flex'>
+                          <IoIosTransgender className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <select type="text" className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' >
+                            <option value="I">Selecionar</option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Mascuino</option>
+                            <option value="N">Não binário</option>
+                          </select>
+                        </div>
+                    </div>
+                  </form>
 
                   <div className="mt-4">
                     <button
-                      type="button"
+                      type="submit"
                       className="float-right inline-flex justify-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 duration-300"
                       onClick={() => setIsOpen(false)}
                     >
