@@ -50,12 +50,14 @@ export default function Notificacoes() {
                       {
                           visualizacao ? (
                               <VscBellDot
-                                  className='text-5xl text-red-500 p-1 rounded-lg hover:bg-slate-300 hover:text-white duration-300'
+                                  className='mt-2 text-5xl text-red-500 p-1 rounded-lg hover:bg-slate-300 hover:text-white duration-300'
                                   onClick={() => { setVisualizacao(false) }}
+                                  size={40}
                               />
                           ) : (
                               <VscBell
-                                  className='text-5xl text-gray-400 p-1 rounded-lg hover:bg-slate-300 hover:text-white duration-300'
+                                  className='mt-2 text-5xl text-gray-400 p-1 rounded-lg hover:bg-slate-300 hover:text-white duration-300'
+                                  size={40}
                               />
                           )
                       }
