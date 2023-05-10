@@ -2,7 +2,7 @@ import Head from "next/head"
 
 import Header from "@/components/header"
 import SlideBar from "@/components/slidebar"
-import Tabela from "@/components/disciplinas/tabela"
+import Materia from "@/components/materia"
 
 export default function Disciplinas() {
     return (
@@ -17,10 +17,10 @@ export default function Disciplinas() {
                     <SlideBar/>
                 </div>
                 <div className="ml-28 w-full">
-                    <h1 className="mt-10 text-4xl font-bold text-[#88185D] text-center">
-                        Disciplinas Matriculadas
+                    <h1 className="mt-10 text-4xl font-bold text-[#88185D]">
+                        Disciplinas matriculadas
                     </h1>
-                    <Tabela/>
+                    <Materia/>
                 </div>
             </div>
         </>

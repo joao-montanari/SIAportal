@@ -12,12 +12,14 @@ export default function Biblioteca() {
         </Head>
         <Header/>
         <div className="flex">
-            <div className="fixed top-20 left-0">
+            <div className='top-20 left-0 fixed'>
                 <SlideBar/>
             </div>
-            <h1 className="mt-10 ml-28 text-4xl font-bold text-[#88185D]">
-                Biblioteca Virtual
-            </h1>
+            <div className="relative ml-28 w-full">
+                <h1 className="mt-10 text-4xl font-bold text-[#88185D]">
+                    Biblioteca Virtual
+                </h1>
+            </div>
         </div>
         </>
     )
