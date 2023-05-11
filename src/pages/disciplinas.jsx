@@ -20,7 +20,18 @@ export default function Disciplinas() {
                     <h1 className="mt-10 text-4xl font-bold text-[#88185D]">
                         Disciplinas matriculadas
                     </h1>
-                    <Materia/>
+                    <div className="">
+                        <h1 className="font-semibold text-gray-500 text-2xl my-4">
+                            Matérias em curso
+                        </h1>
+                        <Materia
+                            name={'Desenvolvimento rápido em Python'}
+                            course={'Ciência da Computação'}
+                            charge={'40 horas'}
+                            professor={'Kessede'}
+                            description={'A matéria tem o objetivo de desenvolver habilidades referentes a linguagem de programação Python por meio de projetos acadêmicos de escolha do aluno.'}
+                        />
+                    </div>
                 </div>
             </div>
         </>
