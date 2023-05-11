@@ -51,76 +51,77 @@ export default function ModalEditUser() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-xl transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="relative w-full max-w-3xl transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <button 
                     type='button'
-                    className='absolute top-0 right-0 mt-3 mr-3 rounded-md hover:bg-red-100 duration-300'
+                    className='absolute top-0 right-0 mt-6 mr-4 rounded-md hover:bg-red-100 duration-300'
                     onClick={() => setIsOpen(false)}
                   >
                     <GrFormClose size={30} className='text-gray-400' />
                   </button>
                   
-                  <Dialog.Title as="h3" className="text-xl font-medium leading-6 text-gray-900">
+                  <Dialog.Title as="h3" className="text-2xl font-medium leading-6 text-gray-900">
                     Editar informações de cadastro
                   </Dialog.Title>
+                  
                   <form className='mt-3 columns-2'>
                     <div className=''>
                       <label className='pl-1'>Nome:</label>
                       <div className='flex'>
-                        <AiOutlineUser className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                        <AiOutlineUser className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                         <input 
                           type="text"
-                          className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                          className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' 
                         />
                       </div>
                     </div>
                     <div className='mt-2'>
                       <label className='pl-1'>E-mail:</label>
                         <div className='flex'>
-                          <MdOutlineEmail className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <MdOutlineEmail className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <input 
                             type="email" 
-                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' 
                           />
                         </div>
                     </div>
                     <div className='mt-2'>
                       <label className='pl-1'>Nascimento:</label>
                         <div className='flex'>
-                          <AiOutlineCalendar className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <AiOutlineCalendar className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <input 
                             type="date" 
-                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' 
                           />
                         </div>
                     </div>
                     <div className='mt-2'>
                       <label className='pl-1'>Telefone:</label>
                         <div className='flex'>
-                          <BiPhone className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <BiPhone className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <InputMask 
                             type="text" 
                             mask="(99) 99999-9999"
-                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' 
                           />
                         </div>
                     </div>
                     <div className='mt-2'>
                       <label className='pl-1'>CPF:</label>
                         <div className='flex'>
-                          <HiOutlineDocumentDuplicate className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
+                          <HiOutlineDocumentDuplicate className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <InputMask 
                             type="text" 
                             mask="999.999.999-99"
-                            className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' 
+                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' 
                           />
                         </div>
                     </div>
                     <div className='mt-2'>
                       <label className='pl-1'>Gênero:</label>
                         <div className='flex'>
-                          <IoIosTransgender className='bg-gray-300 text-white h-8 w-8 border-l-2 border-gray-300'/>
-                          <select type="text" className='border-2 border-gray-300 w-56 p-1 pl-2 text-sm h-8' >
+                          <IoIosTransgender className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
+                          <select type="text" className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8' >
                             <option value="I">Selecionar</option>
                             <option value="F">Feminino</option>
                             <option value="M">Mascuino</option>
