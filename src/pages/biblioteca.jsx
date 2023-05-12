@@ -12,7 +12,7 @@ export default function Biblioteca() {
         </Head>
         <Header/>
         <div className="flex">
-            <div className='top-20 left-0 fixed'>
+            <div className='top-0 left-0 fixed'>
                 <SlideBar/>
             </div>
             <div className="relative ml-28 w-full">

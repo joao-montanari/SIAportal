@@ -8,7 +8,7 @@ import Notificacoes from "./notificacoes"
 export default function Header() {
     return (
         <>
-            <div className="flex items-center h-20 w-full border border-gray-300 shadow-lg">
+            <div className="flex items-center h-20 w-full shadow-lg">
                 <div className="w-1/2 h-full items-center flex">
                     <Link href={'/'}>
                         <Image
@@ -16,7 +16,7 @@ export default function Header() {
                             width={150}
                             height={100}
                             alt='Logo Unimetrocamp'
-                            className="ml-8"
+                            className="ml-28"
                         />
                     </Link>
                 </div>

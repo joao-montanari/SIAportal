@@ -51,7 +51,7 @@ export default function ModalEditUser() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-3xl transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="relative w-full max-w-lg transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <button 
                     type='button'
                     className='absolute top-0 right-0 mt-6 mr-4 rounded-md hover:bg-red-100 duration-300'
@@ -64,14 +64,14 @@ export default function ModalEditUser() {
                     Editar informações de cadastro
                   </Dialog.Title>
                   
-                  <form className='mt-3 columns-2'>
+                  <form className='mt-3'>
                     <div className=''>
                       <label className='pl-1'>Nome:</label>
                       <div className='flex'>
                         <AiOutlineUser className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                         <input 
                           type="text"
-                          className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
+                          className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
                         />
                       </div>
                     </div>
@@ -81,7 +81,7 @@ export default function ModalEditUser() {
                           <MdOutlineEmail className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <input 
                             type="email" 
-                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
+                            className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
                           />
                         </div>
                     </div>
@@ -91,7 +91,7 @@ export default function ModalEditUser() {
                           <AiOutlineCalendar className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
                           <input 
                             type="date" 
-                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
+                            className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
                           />
                         </div>
                     </div>
@@ -102,7 +102,7 @@ export default function ModalEditUser() {
                           <InputMask 
                             type="text" 
                             mask="(99) 99999-9999"
-                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
+                            className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
                           />
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export default function ModalEditUser() {
                           <InputMask 
                             type="text" 
                             mask="999.999.999-99"
-                            className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
+                            className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' 
                           />
                         </div>
                     </div>
@@ -121,7 +121,7 @@ export default function ModalEditUser() {
                       <label className='pl-1'>Gênero:</label>
                         <div className='flex'>
                           <IoIosTransgender className='bg-[#88185D] text-white h-8 w-8 border-l-2 border-[#88185D]'/>
-                          <select type="text" className='border-2 border-[#88185D] w-80 p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' >
+                          <select type="text" className='border-2 border-[#88185D] w-full p-1 pl-2 text-sm h-8 rounded-tr-lg rounded-br-lg' >
                             <option value="I">Selecionar</option>
                             <option value="F">Feminino</option>
                             <option value="M">Mascuino</option>

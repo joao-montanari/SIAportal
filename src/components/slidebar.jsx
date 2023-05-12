@@ -8,6 +8,7 @@ import { GiArchiveRegister, GiBugleCall } from 'react-icons/gi'
 import { SiGoogleclassroom } from 'react-icons/si'
 import { TbBooks } from 'react-icons/tb'
 import { MdWork } from 'react-icons/md'
+import { FaSlidersH } from 'react-icons/fa'
 
 export default function SlideBar({ setTrigger }) {
     const [open, setOpen] = useState(false);
@@ -45,9 +46,9 @@ export default function SlideBar({ setTrigger }) {
     ]
 
     return (
-        <div className= {`${open ? "w-72" : "w-20"} duration-300 h-screen shadow-2xl relative p-3 pt-7 border-l border-gray-300 bg-white`}>
-            <IoIosArrowBack
-                className={`text-3xl absolute w-8 cursor-pointer -right-4 top-16 bg-white border-2 border-gray-200 rounded-full duration-500 ${!open && 'rotate-180'}`}
+        <div className= {`${open ? "w-72" : "w-20"} duration-300 h-screen shadow-2xl relative p-3 pt-16 border-r border-gray-200 bg-white`}>
+            <FaSlidersH
+                className={`text-3xl absolute w-8 text-gray-600 cursor-pointer left-5 top-5 bg-white duration-500 ${!open && 'rotate-180'}`}
                 onClick={() => {setOpen(!open)}}
             />
             <ul>
