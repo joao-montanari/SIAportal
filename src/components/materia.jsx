@@ -32,7 +32,7 @@ export default function Materia({ name, course, description, charge, professor, 
                 width={150}
                 height={100}
                 alt="Journal"
-                className="absolute top-0 right-0 mr-8 mt-8 max-h-40"
+                className="absolute top-0 right-0 mr-8 mt-10 max-h-40"
             />
         </div>
     )

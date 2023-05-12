@@ -173,11 +173,11 @@ export default function Disciplinas() {
                         </div>
                     </div>
 
-                    <div className="">
+                    <div className="border border-gray-300 mb-10 pl-4 w-[95%] rounded-lg shadow-md">
                         <h1 className="font-semibold text-xl my-4 text-[#88185D] border-b-2 border-[#88185D] w-52 ml-3">
                             Matérias em curso
                         </h1>
-                        <div className="columns-2">
+                        <div className="grid grid-cols-2">
                             {
                                 cursando.map((materia) => (
                                     <Materia
@@ -191,8 +191,10 @@ export default function Disciplinas() {
                                 ))
                             }
                         </div>
-                        <h1 className="font-semibold text-xl my-4 text-green-500 border-b-2 border-green-500 w-52 ml-3">
-                            Matérias realizadas
+                    </div>
+                    <div className="border border-gray-300 mb-10 pl-4 w-[95%] rounded-lg shadow-md">
+                        <h1 className="font-semibold text-xl my-4 text-green-500 border-b-2 border-green-500 w-56 ml-3">
+                            Matérias já realizadas
                         </h1>
                         <div className="columns-2">
                             {
@@ -208,7 +210,8 @@ export default function Disciplinas() {
                                 ))
                             }
                         </div>
-                        
+                    </div>
+                    <div className="border border-gray-300 mb-10 pl-4 w-[95%] rounded-lg shadow-md">
                         <h1 className="font-semibold text-xl my-4 text-blue-500 border-b-2 border-blue-500 w-52 ml-3">
                             Matérias a realizar
                         </h1>
