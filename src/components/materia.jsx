@@ -2,12 +2,14 @@ import Image from "next/image"
 import RandomColor from '../logic/randomcolor';
 
 export default function Materia({ name, course, description, charge, professor, status }) {
-    const colors = RandomColor();
-    console.log(colors);
+    let gradient = RandomColor();
+    let randomImage = Math.floor(Math.random() * (10 - 1) + 1);
 
     return (
-        // <div className={`mb-8 relative w-[500px] h-56 rounded-lg p-3 max-w-7xl bg-gradient-to-r from-${colors.finish} via-${colors.middle} to-${colors.start}`}>
-        <div className={`mb-8 relative w-[500px] h-56 rounded-lg p-3 max-w-7xl bg-gradient-to-r ${(status === 'cursando') ? 'from-[#88185D] via-purple-500 to-pink-500' : (status === 'realizar') ? 'bg-gradient-to-r from-blue-500 to-cyan-500': 'bg-gradient-to-r from-green-600 to-green-300'}`}>
+        <div 
+            style={{ background: `${gradient}` }}
+            className='mb-8 relative w-[500px] h-56 rounded-lg p-3 max-w-7xl'
+        >
             <h1 className="font-semibold text-white text-2xl">
                 {name}
             </h1>
@@ -26,11 +28,11 @@ export default function Materia({ name, course, description, charge, professor, 
                 </li>
             </ul>
             <Image
-                src={`${(status === 'cursando') ? '/images/cursando.png' : (status === 'realizar') ? '/images/realizar.png' : '/images/realizado.png'}`}
+                src={`/images/materias/${randomImage}.png`}
                 width={150}
                 height={100}
                 alt="Journal"
-                className="absolute top-0 right-0 mr-8 mt-8"
+                className="absolute top-0 right-0 mr-8 mt-8 max-h-40"
             />
         </div>
     )
