@@ -12,7 +12,7 @@ export default function Estagio() {
             </Head>
             <Header/>
             <div className="flex">
-                <div className='top-0 left-0 fixed'>
+                <div className='top-0 left-0 fixed z-10'>
                     <SlideBar/>
                 </div>
                 <div className="relative ml-28 w-full">

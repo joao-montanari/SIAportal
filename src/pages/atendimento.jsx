@@ -12,7 +12,7 @@ export default function Atendimento() {
             </Head>
             <Header/>
             <div className="flex">
-                <div className='top-0 left-0 fixed'>
+                <div className='top-0 left-0 fixed z-10'>
                     <SlideBar/>
                 </div>
                 <h1 className="mt-10 ml-28 text-4xl font-bold text-[#88185D]">
