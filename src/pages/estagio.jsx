@@ -12,12 +12,17 @@ export default function Estagio() {
             </Head>
             <Header/>
             <div className="flex">
-                <div className="top-0 left-0 fixed">
+                <div className='top-0 left-0 fixed'>
                     <SlideBar/>
                 </div>
-                <h1 className="mt-10 ml-28 text-4xl font-bold text-[#88185D]">
-                    Estágio
-                </h1>
+                <div className="relative ml-28 w-full">
+                    <h1 className="mt-10 text-4xl font-bold text-[#88185D]">
+                        Oportunidades de Estágio
+                    </h1>
+                    <p className="mt-4 text-lg text-gray-500">
+                        Nesta página é possível encontrar oportunidades de empregos postadas pelos usuários da plataforma. Você tambêm pode divulgar uma oportunidade de estágio!
+                    </p>
+                </div>
             </div>
         </>
     )
