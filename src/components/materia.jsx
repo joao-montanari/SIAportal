@@ -23,7 +23,7 @@ export default function Materia({ name, course, description, charge, professor, 
                 <li className="my-2">
                     <strong>Professor responsável:</strong> {professor}
                 </li>
-                <li className="my-1 w-[50%] text-justify">
+                <li className="my-1 w-[50%]">
                     <strong>Descrição:</strong> {description}
                 </li>
             </ul>

@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import Header from '@/components/header'
 import SlideBar from '@/components/slidebar'
-
-const inter = Inter({ subsets: ['latin'] })
+import ChartPie from '@/components/graphics/chartpie'
+import ChartBar from '@/components/graphics/chartbar'
+import ChartLine from '@/components/graphics/charline'
 
 export default function Home() {
   return (
@@ -23,9 +23,56 @@ export default function Home() {
           <div className='top-0 left-0 fixed z-10'>
               <SlideBar/>
           </div>
-          <h1 className="mt-10 ml-28 text-4xl font-bold text-[#88185D]">
-            Home
-          </h1>
+          <div className="ml-28 w-full pr-6">
+            <h1 className="mt-6 text-4xl font-bold text-[#88185D]">
+                Home
+            </h1>
+            <div className="bg-[url('/images/line.png')] rounded-lg">
+              <div className="flex mt-6 w-full h-44 rounded-lg bg-gradient-to-r from-[#88185D] via-[#bf18b1] to-[#f12fa7] opacity-90">
+                <div className='border-r-4 border-white h-full w-1/4 flex justify-center items-center text-center'>
+                  <h1 className='font-bold text-white text-3xl'>
+                    +60 cursos
+                  </h1>
+                </div>
+                <div className='border-r-4 border-white h-full w-1/4 flex justify-center items-center text-center'>
+                  <h1 className='font-bold text-white text-3xl'>
+                    +2.000 alunos
+                  </h1>
+                </div>
+                <div className='border-r-4 border-white h-full w-1/4 flex justify-center items-center text-center'>
+                  <h1 className='font-bold text-white text-3xl'>
+                    +40 unidades
+                  </h1>
+                </div>
+                <div className='h-full w-1/4 flex justify-center items-center text-center'>
+                  <h1 className='font-bold text-white text-3xl'>
+                    +100 profissionais
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <div className='mt-10 grid grid-cols-3 mb-10'>
+              <div className='w-96 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+                <h1 className='mb-2'>
+                  Cursos por categoria na Unimetrocamp
+                </h1>
+                <ChartPie/>
+              </div>
+              <div className='w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+                <h1 className='mb-2'>
+                  Cursos por instituição Wyden
+                </h1>
+                <ChartBar/>
+              </div>
+              <div className='w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+                <h1 className='mb-2'>
+                  Quantidade de alunos na Unimetrocamp
+                </h1>
+                <ChartLine/>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>
