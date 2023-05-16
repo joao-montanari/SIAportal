@@ -35,14 +35,13 @@ function ChartLine() {
         ],
       },
       options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
-            },
-          ],
+        scales: { 
+          x: {
+            type: 'category',
+          },
+          y: {
+            type: 'linear'
+          },
         },
       },
     });
@@ -55,7 +54,9 @@ function ChartLine() {
 
   }, []);
 
-  return <canvas ref={chartRef} />;
+  return (
+    <canvas ref={chartRef} />
+  )
 }
 
 export default ChartLine;

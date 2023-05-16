@@ -36,13 +36,12 @@ function ChartBar() {
       },
       options: {
         scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
-            },
-          ],
+          x: {
+            type: 'category'
+          },
+          y: {
+            type: 'linear'
+          },
         },
       },
     });

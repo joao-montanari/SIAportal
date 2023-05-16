@@ -27,7 +27,7 @@ export default function Home() {
             <h1 className="mt-6 text-4xl font-bold text-[#88185D]">
                 Home
             </h1>
-            <div className="bg-[url('/images/line.png')] rounded-lg">
+            <div className="rounded-lg">
               <div className="flex mt-6 w-full h-44 rounded-lg bg-gradient-to-r from-[#88185D] via-[#bf18b1] to-[#f12fa7] opacity-90">
                 <div className='border-r-4 border-white h-full w-1/4 flex justify-center items-center text-center'>
                   <h1 className='font-bold text-white text-3xl'>
@@ -53,23 +53,29 @@ export default function Home() {
             </div>
 
             <div className='mt-10 grid grid-cols-3 mb-10'>
-              <div className='w-96 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+              <div className='w-80 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Cursos por categoria na Unimetrocamp
                 </h1>
-                <ChartPie/>
+                <div className='h-56 flex justify-center items-center'>
+                  <ChartPie/>
+                </div>
               </div>
-              <div className='w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+              <div className='w-80 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Cursos por instituição Wyden
                 </h1>
-                <ChartBar/>
+                <div className='h-56 flex justify-center items-center'>
+                  <ChartBar/>
+                </div>
               </div>
-              <div className='w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+              <div className='w-80 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
-                  Quantidade de alunos na Unimetrocamp
+                  Alunos na Unimetrocamp
                 </h1>
-                <ChartLine/>
+                <div className='h-56 flex justify-center items-center'>
+                  <ChartLine/>
+                </div>
               </div>
             </div>
           </div>
