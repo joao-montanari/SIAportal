@@ -52,7 +52,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='mt-10 grid grid-cols-3 mb-10'>
+            <div className='mt-10 flex justify-between'>
               <div className='w-80 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Cursos por categoria na Unimetrocamp
