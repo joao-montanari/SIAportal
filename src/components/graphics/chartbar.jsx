@@ -11,11 +11,11 @@ function ChartBar() {
     const newChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Faci", "Falcão", "FACIMP", "UniFanor", "UniFavip"],
+        labels: ["Faci", "UniMetro", "FACIMP", "UniToledo", "UniFavip"],
         datasets: [
           {
             label: "Cursos",
-            data: [102, 107, 110, 116, 63],
+            data: [102, 107, 110, 46, 63],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",

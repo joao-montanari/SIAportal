@@ -47,14 +47,26 @@ export default function SlideBar({ setTrigger }) {
 
     return (
         <div className= {`${open ? "w-72" : "w-20"} duration-300 h-screen shadow-2xl relative p-3 pt-16 border-r border-gray-200 bg-white`}>
-            <FaSlidersH
-                className={`text-3xl absolute w-8 text-gray-600 cursor-pointer left-5 top-5 bg-white duration-500 ${!open && 'rotate-180'}`}
-                onClick={() => {setOpen(!open)}}
-            />
+            <div className="flex absolute left-5 top-8">
+                <FaSlidersH
+                    className={`text-3xl w-8 text-gray-600 cursor-pointer duration-500 ${!open && 'rotate-180'}`}
+                    onClick={() => {setOpen(!open)}}
+                />
+                <Image
+                    src={'/images/unimetrocamp.png'}
+                    width={180}
+                    height={60}
+                    className={`${!open && 'hidden'} ml-4`}
+                />
+            </div>
             <ul>
                 {
                     Menu.map((aba, index)=>(
-                        <Link href={`/${aba.src}`} key={index} className={`p-1 text-gray-400 flex items-center gap-x-4 rounded-md duration-300 ${aba.gap ? "mt-9 text-xl font-bold" : "text-base mt-2 hover:bg-gray-200 cursor-pointer"} ${index === 0 && 'mt-7'}`}>
+                        <Link 
+                            href={`/${aba.src}`} 
+                            key={index} 
+                            className={`p-1 text-gray-400 flex items-center gap-x-4 rounded-md duration-300 ${aba.gap ? "mt-9 text-xl font-bold" : "text-base mt-2 hover:bg-gray-200 cursor-pointer"} ${index === 0 && 'mt-7'}`}
+                        >
                             {aba.icon}
                             <span className={`${!open && 'hidden'} origin-left duration-300`}>
                                 {aba.title}

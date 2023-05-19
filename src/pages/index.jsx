@@ -52,8 +52,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='mt-10 flex justify-between'>
-              <div className='w-80 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+            <div className='mt-10 flex justify-between w-[85%] m-auto'>
+              <div className='max-w-lg w-96 h-72 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Cursos por categoria na Unimetrocamp
                 </h1>
@@ -61,7 +61,7 @@ export default function Home() {
                   <ChartPie/>
                 </div>
               </div>
-              <div className='w-80 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+              <div className='max-w-lg w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Cursos por instituição Wyden
                 </h1>
@@ -69,7 +69,7 @@ export default function Home() {
                   <ChartBar/>
                 </div>
               </div>
-              <div className='w-80 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
+              <div className='max-w-lg w-96 border border-gray-400 p-4 shadow-lg rounded-lg text-center'>
                 <h1 className='mb-2'>
                   Alunos na Unimetrocamp
                 </h1>
